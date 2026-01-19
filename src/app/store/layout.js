@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function StoreLayout({ children }) {
   return (
-    <div className="flex xs:flex-col sm:flex-col md:flex-row lg: flex-row xl:flex-row bg-gray-100">
+    <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row bg-gray-100">
       {/* <div className="flex p-2"> */}
         <Sidebar />
         <div>

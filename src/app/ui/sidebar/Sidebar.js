@@ -15,7 +15,7 @@ const Sidebar = () => {
         </div>
       </Link>
       
-      <div className='m-2 flex flex-wrap justify-center flex-row md:justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2'>
+      <div className='m-2 flex flex-wrap justify-center flex-row md:justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2 gap-2'>
         <NavLinks />
         <form>
           <button type='submit' className='flex grow items-center gap-2 rounded-md bg-white p-4'>
