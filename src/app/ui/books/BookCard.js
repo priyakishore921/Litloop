@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  CurrencyRupeeIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/solid";
+import { CurrencyRupeeIcon, } from "@heroicons/react/24/solid";
+import AddToCart from "./AddToCart";
 
 const BookCard = ({ book }) => {
   return (
@@ -47,18 +45,7 @@ const BookCard = ({ book }) => {
 
           </div>
           <hr className='bg-gray-300 h-px w-3/4 mt-4 border-0 rounded-md' />
-          <div className='flex'>
-            <button
-              className='cursor-pointer p-2 m-2 bg-purple-500 rounded-md text-sm text-white flex flex-row gap-1 items-center'
-            >
-              <ShoppingCartIcon className='h-6 w-4' />Buy
-            </button>
-            <button
-              className='cursor-pointer p-2 m-2 bg-purple-500 rounded-md text-sm text-white flex flex-row gap-1 items-center'
-            >
-              <ShoppingCartIcon className='h-6 w-4' />Rent
-            </button>
-          </div>
+          <AddToCart book={book} />
         </div>
       </Link>
     </div>

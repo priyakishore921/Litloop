@@ -1,4 +1,6 @@
 import Sidebar from "../ui/sidebar/Sidebar";
+import Header from "../ui/header/Header";
+import StoreProvider from "../provider/index";
 
 export const metadata = {
   title: "Litloop - Buy or Rent Books",
@@ -7,13 +9,16 @@ export const metadata = {
 
 export default function StoreLayout({ children }) {
   return (
-    <div className="flex xs:flex-col sm:flex-col md:flex-row lg: flex-row xl:flex-row bg-gray-100">
-      {/* <div className="flex p-2"> */}
+    <StoreProvider>
+      <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row bg-gray-100 p-4">
+        {/* <div className="flex p-2"> */}
         <Sidebar />
-        <div>
+        <div className="grow ml-2">
+          <Header />
           {children}
         </div>
-      {/* </div> */}
-    </div>
+        {/* </div> */}
+      </div>
+    </StoreProvider>
   );
 }

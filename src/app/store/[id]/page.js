@@ -7,7 +7,6 @@ const BookDetailsPage = async ({params}) => {
   
   const book = getBookById(id);
   
-
   return (
     <BookCard book={book} />
   );
