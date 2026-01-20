@@ -40,7 +40,7 @@ const NavLinks = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="flex h-12 grow items-center justify-start gap-2 rounded-md p-4 bg-white"
+              className="flex h-12 grow items-center justify-start gap-2 rounded-md p-4 bg-white hover:text-purple-500 hover:bg-amber-50"
             >
               <IconComponent className="w-6" />
               <p className="hidden md:block">
