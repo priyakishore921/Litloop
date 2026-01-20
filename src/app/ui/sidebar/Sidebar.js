@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className='flex flex-col'>
       <Link
         href='/store'
-        className='bg-purple-500 flex h-20 items-end justify-start rounded-md p-4 mb-4'
+        className='bg-purple-500 flex h-18 items-center justify-start rounded-md p-2 mb-2'
       >
         <div className='w-32 md:w-40'>
           <Logo />
