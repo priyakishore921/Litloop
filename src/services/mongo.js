@@ -1,0 +1,10 @@
+import mongoose from "mongoose";
+
+export default async function dbConnect() {
+  try {
+    const connection = await mongoose.connect(process.env.MONGO_URI);
+    return connection;
+  } catch (err) {
+    console.log(err);
+  }
+}

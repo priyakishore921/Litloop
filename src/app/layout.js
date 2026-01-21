@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import dbConnect from "@/services/mongo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,10 @@ export const metadata = {
   description: "An online bookstore to Sell and Rent Used Books",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const conn = await dbConnect();
+  console.log(conn);
+  
   return (
     <html lang="en">
       <body
