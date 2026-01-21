@@ -1,6 +1,8 @@
 import BookCard from './BookCard';
 
 const BookList = ({ books }) => {
+  console.log(books);
+
   return (
     <div className='flex flex-col md:flex-row md:flex-wrap'>
      { books.map(book => {

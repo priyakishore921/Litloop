@@ -45,7 +45,10 @@ const BookCard = ({ book }) => {
 
           </div>
           <hr className='bg-gray-300 h-px w-3/4 mt-4 border-0 rounded-md' />
-          <AddToCart book={book} />
+          <AddToCart book={{
+            ...book,
+            _id: book._id.toString()
+          }} />
         </div>
       </Link>
     </div>
